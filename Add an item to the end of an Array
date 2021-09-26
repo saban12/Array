@@ -1,0 +1,10 @@
+let fruits = ['Apple', 'Banana']
+
+fruits.push('Orange');
+
+console.log(fruits);
+// ["Apple", "Banana", "Orange"]
+
+if (fruits.length > 3) {
+  console.log(true);}
+else console.log(false);
