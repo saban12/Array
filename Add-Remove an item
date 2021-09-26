@@ -1,0 +1,45 @@
+////Add an item to the end of an Array
+let fruits = ['Apple', 'Banana']
+
+fruits.push('Orange');
+
+console.log(fruits);
+// ["Apple", "Banana", "Orange"]
+
+if (fruits.length > 3) {
+  console.log(true);}
+else console.log(false);
+
+
+
+
+////Remove an item from the end of an Array
+let fruits = ['Apple', 'Banana']
+
+fruits.push('Orange'); // return 3
+console.log(fruits) // ['Apple', 'Banana', 'Orange']
+
+let last = fruits.pop() // remove Orange (from the end)
+
+console.log(last); // 'Orange'
+console.log(fruits); // ["Apple", "Banana"]
+
+
+
+
+////Remove an item from the beginning of an Array
+let fruits = ['Apple', 'Banana']
+
+let first = fruits.shift() // remove Apple from the front
+console.log(first); // 'Apple'
+console.log(fruits) // [ 'Banana' ]
+
+
+
+////Add an item to the beginning of an Array
+let fruits = ['Apple', 'Banana']
+
+let newLength = fruits.unshift('Strawberry') // add to the front
+
+console.log(newLength); // "2"
+console.log(fruits) // [ 'Strawberry', 'Apple', 'Banana' ]
