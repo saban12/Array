@@ -16,7 +16,7 @@ console.log(removedItem) // [ 'Banana' ]
 
 
 ////look for objects in array
-//Syntax
+//Syntax--
 //indexOf(searchElement)
 //indexOf(searchElement, fromIndex)
 const beasts = ['ant', 'bison', 'camel', 'duck', 'bison'];
@@ -26,7 +26,7 @@ console.log(beasts.indexOf('bison')); // expected output: 1
 // looking for "bison" start from index 2 (loop over the array)
 console.log(beasts.indexOf('bison', 2)); // expected output: 4 (loop over the array)
 
-console.log(beasts.indexOf('giraffe')); // expected output: -1
+console.log(beasts.indexOf('giraffe')); // expected output: -1 (not found)
 
 
 
@@ -67,7 +67,24 @@ console.log(idx);
 
 
 
-                               
+
+////search element in an array and return the number of occurrences
+const str = 'To be, or not to be, that is the question.'
+let count = 0
+let position = str.indexOf('e') // starts from the first occurrences so it wont get counted twice
+
+while (position !== -1) {
+  count++
+                       //(element, position to look from)
+  position = str.indexOf('e', position + 1)
+}
+
+console.log(count)  // displays 4
+
+
+
+
+////Finding if an element exists in the array or not and updating the array                              
 function updateVegetablesCollection (array, itemToCheck) { 
     if (array.indexOf(itemToCheck) === -1) {
         array.push(itemToCheck);
@@ -81,3 +98,26 @@ var veggies = ['potato', 'tomato', 'chillies', 'green-pepper'];
 
 updateVegetablesCollection(veggies, 'spinach'); // New veggies collection is : potato,tomato,chillies,green-pepper,spinach
 updateVegetablesCollection(veggies, 'spinach');// spinach already exists in the veggies collection.
+
+
+
+////copy
+let array1 = [1, 2, 3, 4, 5] // copy the array 2 places from the end
+               //(target)
+array1.copyWithin(-2)                             // [1, 2, 3, 1, 2]
+
+
+let array2 = [1, 2, 3, 4, 5]
+               //(target, start copy)
+array2.copyWithin(0, 3)                          // [4, 5, 3, 4, 5]
+
+
+let array3 = [1, 2, 3, 4, 5]
+                 //(target, start, end)
+array3.copyWithin(0, 3, 4)                       // [4, 2, 3, 4, 5]
+
+
+let array4 = [1, 2, 3, 4, 5]
+array4.copyWithin(-2, -3, -1)                    // [1, 2, 3, 3, 4]
+
+
