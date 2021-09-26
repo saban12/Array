@@ -1,0 +1,14 @@
+let fruits = ['Apple', 'Banana']
+
+let pos = fruits.indexOf('Banana')
+console.log(pos) // 1  -return the position of the item
+
+
+
+////Remove an item by index position
+let fruits = ['Apple', 'Banana' , 'grape']
+
+let removedItem = fruits.splice(1 , 1) // (item position , number of items) if item num is blank, delete all the position item and all that follow 
+
+console.log(fruits) // [ 'Apple', 'grape' ]
+console.log(removedItem) // [ 'Banana' ]
