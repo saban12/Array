@@ -1,0 +1,10 @@
+let fruits = ['Apple', 'Banana']
+
+console.log(fruits.length)
+// 2
+
+first = fruits[0]
+// Apple
+
+last = fruits[fruits.length - 1]
+// Banana
