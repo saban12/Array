@@ -12,3 +12,38 @@ let removedItem = fruits.splice(1 , 1) // (item position , number of items) if i
 
 console.log(fruits) // [ 'Apple', 'grape' ]
 console.log(removedItem) // [ 'Banana' ]
+
+
+
+////look for objects in array
+//Syntax
+//indexOf(searchElement)
+//indexOf(searchElement, fromIndex)
+const beasts = ['ant', 'bison', 'camel', 'duck', 'bison'];
+
+console.log(beasts.indexOf('bison')); // expected output: 1
+
+// looking for "bison" start from index 2 (loop over the array)
+console.log(beasts.indexOf('bison', 2)); // expected output: 4 (loop over the array)
+
+console.log(beasts.indexOf('giraffe')); // expected output: -1
+
+
+
+/////Index of first occurrences
+const str = 'Brave new world'
+
+console.log('Index of first w from start is ' + str.indexOf('w'))   // logs 8
+console.log('Index of "new" from start is ' + str.indexOf('new'))   // logs 6
+
+//
+const paragraph = 'The quick brown fox jumps over the lazy dog. If the dog barked, was it really lazy?';
+
+const searchTerm = 'dog';
+const indexOfFirst = paragraph.indexOf(searchTerm);
+
+console.log(`The index of the first "${searchTerm}" from the beginning is ${indexOfFirst}`); // expected output: "The index of the first "dog" from the beginning is 40"
+
+
+console.log(`The index of the 2nd "${searchTerm}" is ${paragraph.indexOf(searchTerm, (indexOfFirst + 1))}`); // expected output: "The index of the 2nd "dog" is 52"
+
