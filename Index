@@ -47,3 +47,37 @@ console.log(`The index of the first "${searchTerm}" from the beginning is ${inde
 
 console.log(`The index of the 2nd "${searchTerm}" is ${paragraph.indexOf(searchTerm, (indexOfFirst + 1))}`); // expected output: "The index of the 2nd "dog" is 52"
 
+
+
+////search element in an array and return the position of all occurrences of an element
+////the indexOf(searchValue, fromIndex) search start from a given position
+////the idx variable use in the while loop as an ascending operator
+var indices = [];
+var array = ['a', 'b', 'a', 'c', 'a', 'd'];
+var element = 'a';
+var idx = 0;
+
+while (idx != -1) {
+  indices.push(idx);
+  idx = array.indexOf(element, idx + 1); //indexOf(searchValue, fromIndex)
+}
+console.log(indices); // [0, 2, 4]
+
+console.log(idx);
+
+
+
+                               
+function updateVegetablesCollection (array, itemToCheck) { 
+    if (array.indexOf(itemToCheck) === -1) {
+        array.push(itemToCheck);
+        console.log('New veggies collection is : ' + array);
+    } else if (array.indexOf(itemToCheck) > -1) {
+        console.log(itemToCheck + ' already exists in the veggies collection.');
+    }
+}
+
+var veggies = ['potato', 'tomato', 'chillies', 'green-pepper'];
+
+updateVegetablesCollection(veggies, 'spinach'); // New veggies collection is : potato,tomato,chillies,green-pepper,spinach
+updateVegetablesCollection(veggies, 'spinach');// spinach already exists in the veggies collection.
