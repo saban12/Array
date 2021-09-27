@@ -1,0 +1,12 @@
+////search element in an array and return the number of occurrences
+const str = 'To be, or not to be, that is the question.'
+let count = 0
+let position = str.indexOf('e') // starts from the first occurrences so it wont get counted twice
+
+while (position !== -1) {
+  count++
+                       //(element, position to look from)
+  position = str.indexOf('e', position + 1)
+}
+
+console.log(count)  // displays 4
