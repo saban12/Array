@@ -1,0 +1,13 @@
+////look for objects in array
+//Syntax--
+//indexOf(searchElement)
+//indexOf(searchElement, fromIndex)
+const beasts = ['ant', 'bison', 'camel', 'duck', 'bison'];
+
+console.log(beasts.indexOf('bison')); // expected output: 1
+
+// looking for "bison" start from index 2 (loop over the array)
+console.log(beasts.indexOf('bison', 2)); // expected output: 4 (loop over the array)
+
+console.log(beasts.indexOf('giraffe')); // expected output: -1 (not found)
+
