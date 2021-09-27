@@ -1,0 +1,5 @@
+let fruits = ['Apple', 'Banana']
+
+let pos = fruits.indexOf('Banana')
+console.log(pos) // 1  -return the position of the item
+
