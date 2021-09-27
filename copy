@@ -1,0 +1,19 @@
+////copy
+let array1 = [1, 2, 3, 4, 5] // copy the array 2 places from the end
+               //(target)
+array1.copyWithin(-2)                             // [1, 2, 3, 1, 2]
+
+
+let array2 = [1, 2, 3, 4, 5]
+               //(target, start copy)
+array2.copyWithin(0, 3)                          // [4, 5, 3, 4, 5]
+
+
+let array3 = [1, 2, 3, 4, 5]
+                 //(target, start, end)
+array3.copyWithin(0, 3, 4)                       // [4, 2, 3, 4, 5]
+
+
+let array4 = [1, 2, 3, 4, 5]
+array4.copyWithin(-2, -3, -1)                    // [1, 2, 3, 3, 4]
+
