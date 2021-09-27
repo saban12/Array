@@ -1,0 +1,15 @@
+////search element in an array and return the position of all occurrences of an element
+////the indexOf(searchValue, fromIndex) search start from a given position
+////the idx variable use in the while loop as an ascending operator
+var indices = [];
+var array = ['a', 'b', 'a', 'c', 'a', 'd'];
+var element = 'a';
+var index = 0;
+
+while (index != -1) {
+  indices.push(index);
+  index = array.indexOf(element, index + 1); //indexOf(searchValue, fromIndex)
+}
+console.log(indices); // [0, 2, 4]
+
+console.log(index);
