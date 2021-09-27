@@ -1,0 +1,15 @@
+////Finding if an element exists in the array or not and updating the array                              
+function updateVegetablesCollection (array, itemToCheck) { 
+    if (array.indexOf(itemToCheck) === -1) {
+        array.push(itemToCheck);
+        console.log('New veggies collection is : ' + array);
+    } else if (array.indexOf(itemToCheck) > -1) {
+        console.log(itemToCheck + ' already exists in the veggies collection.');
+    }
+}
+
+var veggies = ['potato', 'tomato', 'chillies', 'green-pepper'];
+
+updateVegetablesCollection(veggies, 'spinach'); // New veggies collection is : potato,tomato,chillies,green-pepper,spinach
+updateVegetablesCollection(veggies, 'spinach');// spinach already exists in the veggies collection.
+
