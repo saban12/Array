@@ -1,0 +1,13 @@
+var sortMe = [9,6,5,5,7,11,2,6,3,7,3];
+sortMe.sort();
+
+var numbers = [4, 2, 11, 5, 1, 3,11,155,2,35];
+numbers.sort(function(a, b) {
+  return a - b;
+});
+console.log(numbers);
+
+
+let moreNumbers = [4, 2, 11, 5, 1, 3,11,155,2,35];
+moreNumbers.sort((a, b) => a - b);
+console.log(moreNumbers);
